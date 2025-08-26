@@ -24,7 +24,8 @@
       "edgeToEdgeEnabled": true,
       "splash": {
         "image": "./assets/images/splash.png"
-      }
+      },
+      "package": "com.aqeel123ex.thmanyah_tv"
     },
     "ios": {
       "splash": {
@@ -41,6 +42,10 @@
     },
     "newArchEnabled": true,
     "name": "thmanyah_tv",
-    "slug": "thmanyah_tv"
+    "slug": "thmanyah_tv",
+    "platforms": ["android", "ios", "web"],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
   }
 }

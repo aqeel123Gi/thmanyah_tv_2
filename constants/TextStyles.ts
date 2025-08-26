@@ -14,6 +14,7 @@ export const textStyles = function (
     default: {
       fontSize: 16 * scale,
       lineHeight: 24 * scale,
+      fontFamily: 'IBMPlexSansArabic'
     },
     defaultSemiBold: {
       fontSize: 16 * scale,
@@ -24,6 +25,7 @@ export const textStyles = function (
       fontSize: 32 * scale,
       fontWeight: 'bold',
       lineHeight: 32 * scale,
+      fontFamily: 'IBMPlexSansArabic'
     },
     subtitle: {
       fontSize: 20 * scale,
