@@ -10,7 +10,7 @@ import { checkConnectivity, ConnectivityState } from '@/helpers/checkConnectivit
 import { useTVButtons } from '@/helpers/tvButtons';
 
 
-export default function VideoPlayer({ videos, homePageController: states }: { videos: VideoModel[], homePageController: HomePageController }) {
+export default function VideoPlayer({ homePageController: states }: { homePageController: HomePageController }) {
 
 
 
@@ -92,13 +92,13 @@ export default function VideoPlayer({ videos, homePageController: states }: { vi
         
       
         <View style={{opacity: visibility?1:0}}>
-        <View style={{ position: 'absolute', top: 40, left: 0, right: 0, alignItems: 'center'}}>
-        <View style={{ backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: 8, paddingHorizontal: 24, paddingVertical: 8 }}>
-          <ThemedText style={{ color: '#fff', fontSize: 24, fontWeight: 'bold', textAlign: 'center' }}>
-            {videos[states.currentIndex.get()].title}
-          </ThemedText>
+          <View style={{ position: 'absolute', top: 40, left: 0, right: 0, alignItems: 'center'}}>
+          <View style={{ backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: 8, paddingHorizontal: 24, paddingVertical: 8 }}>
+            <ThemedText style={{ color: '#fff', fontSize: 24, fontWeight: 'bold', textAlign: 'center' }}>
+              {states.videoPlaying.get()!.title}
+            </ThemedText>
+          </View>
         </View>
-      </View>
         
 
 
@@ -107,7 +107,7 @@ export default function VideoPlayer({ videos, homePageController: states }: { vi
           hasTVPreferredFocus = {true}
           focusable = {true}
           disableFocus ={false}
-          source={{ uri: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' }} // HLS
+          source={{ uri: states.videoPlaying.get()!.videoPath }} // HLS
           style={styles.video}
           controls={true}
           resizeMode="contain"

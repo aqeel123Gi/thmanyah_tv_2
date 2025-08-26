@@ -8,20 +8,18 @@ import { HomePageController } from './controller';
 
 
 
-export default function HomeBageBackground({ videos, homePageController: states }: { videos: VideoModel[], homePageController: HomePageController }) {
-
-  const isRTL = I18nManager.isRTL;
+export default function HomeBageBackground({ homePageController: states }: { homePageController: HomePageController }) {
 
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
-  const [currentVideoForView, setCurrentVideoForView] = useState(videos[states.currentIndex.get()]);
+  const [currentVideoForView, setCurrentVideoForView] = useState(states.mockVideos[states.currentIndex.get()]);
 
 
   function currentVideo(): VideoModel {
     if (states.onLastPlayedVideo.get()) {
       return states.lastPlayedVideo.get()!;
     } else {
-      return videos[states.currentIndex.get()];
+      return states.mockVideos[states.currentIndex.get()];
     }
   }
 

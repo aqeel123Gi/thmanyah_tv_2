@@ -9,7 +9,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '2',
@@ -19,7 +19,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/dai-discontinuity-deltatre/manifest.m3u8',
   },
   {
     id: '3',
@@ -29,7 +29,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/bbbAES/playlists/sample_aes/index.m3u8',
   },
   {
     id: '4',
@@ -39,7 +39,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '5',
@@ -49,7 +49,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '6',
@@ -59,7 +59,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '7',
@@ -69,7 +69,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '8',
@@ -79,7 +79,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '9',
@@ -89,7 +89,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '12',
@@ -99,7 +99,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '13',
@@ -109,7 +109,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '14',
@@ -119,7 +119,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '15',
@@ -129,7 +129,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '16',
@@ -139,7 +139,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '17',
@@ -149,7 +149,7 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/53/200/300',
     minsOfRuntime: 55,
     stars: ['نجم1', 'نجم2'],
-    videoPath: 'path/to/video1.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
   {
     id: '18',
@@ -159,6 +159,6 @@ export const mockVideos: VideoModel[] = [
     thumbnailImagePath: 'https://picsum.photos/id/10/200/300',
     minsOfRuntime: 42,
     stars: ['نجم3', 'نجم4'],
-    videoPath: 'path/to/video2.mp4',
+    videoPath: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
   },
 ];

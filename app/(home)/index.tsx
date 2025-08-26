@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import { mockVideos } from '../../data/movies';
 import VideoList from './videoList';
 import HomeBageBackground from './background';
 import useHomePageController from './controller';
@@ -10,9 +9,9 @@ import ResumeSection from './ResumeSection';
 export default function HomeScreen() {
   
   const { 
-    states, 
+    states: controller, 
     mainScreenViewRef,
-  } = useHomePageController(mockVideos);
+  } = useHomePageController();
 
   return (
     <View 
@@ -22,10 +21,10 @@ export default function HomeScreen() {
       hasTVPreferredFocus={true}
       >
 
-      <HomeBageBackground videos={mockVideos} homePageController={states}/>
-      <ResumeSection videos={mockVideos} homePageController={states}/>
-      <VideoPlayer videos={mockVideos} homePageController={states}/>
-      <VideoList videos={mockVideos} homePageController={states}/>
+      <HomeBageBackground homePageController={controller}/>
+      <ResumeSection homePageController={controller}/>
+      <VideoPlayer homePageController={controller}/>
+      <VideoList homePageController={controller}/>
 
     </View>
   );

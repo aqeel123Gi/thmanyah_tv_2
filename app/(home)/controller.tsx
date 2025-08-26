@@ -3,11 +3,13 @@ import { loadData, saveData } from "@/helpers/storage";
 import { useTVButtons } from "@/helpers/tvButtons";
 import { VideoModel } from "@/models/video";
 import { useEffect, useRef } from "react";
-import { findNodeHandle, View } from "react-native";
+import { BackHandler, findNodeHandle, View } from "react-native";
+import { mockVideos } from '../../data/movies';
 
 
 export interface HomePageController{
   // States
+  mockVideos: VideoModel[],
   currentIndex: StateReference<number>,
   videoPlaying: StateReference<VideoModel | null>,
   lastPlayedVideo: StateReference<VideoModel | null>,
@@ -19,7 +21,7 @@ export interface HomePageController{
   saveLastPlayedVideo: (videoId: string, seek: number) => Promise<void>,
 }
 
-export default function useHomePageController(videos: VideoModel[]) {
+export default function useHomePageController() {
 
   const currentIndex = getStateReference<number>(0);
   const videoPlaying = getStateReference<VideoModel | null>(null);
@@ -46,7 +48,7 @@ export default function useHomePageController(videos: VideoModel[]) {
     //   onLastPlayedVideo.set(false);
     // },
     onBackButtonPressed: ()=>{
-      return false;
+      BackHandler.exitApp();
     },
     actionMap: {
       'up': ()=>{
@@ -60,18 +62,18 @@ export default function useHomePageController(videos: VideoModel[]) {
         }
       },
       'left': ()=>{
-        currentIndex.set((currentIndex.get() + 1) % videos.length);
+        currentIndex.set((currentIndex.get() + 1) % mockVideos.length);
         onLastPlayedVideo.set(false);
       },
       'right': ()=>{
-        currentIndex.set((currentIndex.get() - 1 + videos.length) % videos.length);
-      onLastPlayedVideo.set(false);
+        currentIndex.set((currentIndex.get() - 1 + mockVideos.length) % mockVideos.length);
+        onLastPlayedVideo.set(false);
       },
       'select':()=>{
         if(onLastPlayedVideo.get()){
           videoPlaying.set(lastPlayedVideo.get()!);
         }else{
-          videoPlaying.set(videos[currentIndex.get()]);
+          videoPlaying.set(mockVideos[currentIndex.get()]);
         }
       }
     }
@@ -103,9 +105,9 @@ export default function useHomePageController(videos: VideoModel[]) {
       const seek = await loadData('last-video-seek');
       if(id!=null){
         // Find the video with the loaded id and set it as the current video
-        const videoIndex = videos.findIndex(video => video.id === id);
+        const videoIndex = mockVideos.findIndex(video => video.id === id);
         if (videoIndex !== -1) {
-          lastPlayedVideo.set(videos[videoIndex]);
+          lastPlayedVideo.set(mockVideos[videoIndex]);
           lastPlayedVideoSeek.set(seek !== null ? Number(seek) : 0);
         }
       }
@@ -121,6 +123,7 @@ export default function useHomePageController(videos: VideoModel[]) {
 
 
   const controllerReference:HomePageController = {
+    mockVideos,
     currentIndex,
     videoPlaying,
     isVideoPlaying,

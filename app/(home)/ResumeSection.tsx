@@ -5,7 +5,7 @@ import { Colors } from '@/constants/Colors';
 import { HomePageController } from './controller';
 
 
-export default function ResumeSection({ videos, homePageController: states }: { videos: VideoModel[], homePageController: HomePageController }) {
+export default function ResumeSection({ homePageController: states }: { homePageController: HomePageController }) {
 
   
   const activeAnim = useRef(new Animated.Value(1)).current;
