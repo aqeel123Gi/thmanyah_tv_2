@@ -17,8 +17,8 @@ export default function HomeScreen() {
     <View 
       ref={mainScreenViewRef} 
       style={styles.container}
-      focusable={true}
-      hasTVPreferredFocus={true}
+      focusable={!controller.isVideoPlaying()}
+      hasTVPreferredFocus={!controller.isVideoPlaying()}
       >
 
       <HomeBageBackground homePageController={controller}/>

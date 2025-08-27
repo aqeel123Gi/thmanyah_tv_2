@@ -42,7 +42,7 @@ export function useTVButtons({
   useTVEventHandler((evt) => {
 
     if (!condition()) return;
-
+    
     console.log("Button Function: ", evt);
 
     if (evt && evt.eventType && actionMap && actionMap[evt.eventType]) {
